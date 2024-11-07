@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exception (Case)</title>
+    <script>
+    // Waktu Dengan 1 detik
+    function setTime() {
+    const header = document.getElementById("header");
+    header.textContent = new Date().toString();
+    }
+    setInterval(setTime, 1000);
+    console.log("Program Finish"); 
+
+    // divide 
+    function divide(a, b) {
+    try {
+        if (typeof a !== "number" || typeof b !== "number") {
+            throw new Error("Input harus berupa angka.");
+        }
+
+        if (b === 0) {
+            throw new Error("Pembagian dengan nol tidak diperbolehkan.");
+        }
+
+        return a / b;
+    } catch (error) {
+        console.error("Terjadi kesalahan:", error.message);
+        return null; 
+    }
+    }
+    console.log(divide(10, 2));  
+    console.log(divide(10, 0));
+    console.log(divide(10, "a"));
+
+    // Antrian awal
+    let queue = ["Ray", "Fiki", "Fadhilla", "Farah"];
+    // Datang 1 pembeli yaitu Nabila
+    queue.push("Nabila");
+    // Datang 2 pembeli yaitu Maza dan Elsi
+    queue.push("Maza", "Elsi");
+    // Antrian terakhir (Elsi) pulang ke rumah
+    queue.pop();
+    // Antrian pertama (Ray) sudah mendapatkan belanjaannya
+    queue.shift();
+    // Antrian kedua (Fiki) sudah mendapatkan belanjaannya
+    queue.shift();
+    // Pembeli baru yang nyerobot antrian yaitu Tomi
+    queue.unshift("Tomi");
+    // Hasil akhir antrian
+    console.log(queue);
+    </script>
+
+<body>
+    <h1 id="header">Halo kak :V</h1>
+</body>
+</html>

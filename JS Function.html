@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function</title>
+    <script>
+    // tampilan Heart
+    function printHeart() {
+    console.log("<3");
+    }
+
+    printHeart();
+     
+    // Return Value
+    function multiply(a, b) {
+    return a * b;
+    }
+
+    console.log(multiply(2, 3));
+    console.log(multiply(9, 9)); 
+    console.log(multiply(5, 4)); 
+
+    // Yang muncul Pajma Squid
+    let animal = "Giant Pacific Octopus";
+    function observe(){
+    let animal = "Pajama Squid";
+    console.log(animal);
+    }
+    observe();
+
+    // Yang muncul pertama Scopion setelah itu si Blue 
+    let deadlyAnimal = "Blue-Ringed Octopus";
+    function handleAnimal() {
+    let deadlyAnimal = "Scorpionfish";
+    console.log(deadlyAnimal);
+    }
+    handleAnimal();
+    console.log(deadlyAnimal);
+
+    // sayHello
+    const sayHello = (name) => `Hello ${name}!`;
+
+    console.log(sayHello("Hagrid")); 
+    console.log(sayHello("Luna"));   
+    </script>
+</head>
+<body>
+    <h1 id="header">Halo kak :V</h1>
+</body>
+</html>
